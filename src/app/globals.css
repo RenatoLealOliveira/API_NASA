@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+}
+
+/* Smooth transitions for all interactive elements */
+a,
+button,
+input {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Initial "Stars" background using radial gradients - simple and pure CSS */
+.dark body {
+  background-color: #0f172a;
+  /* slate-900 */
+  background-image:
+    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
+    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
+    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+}
